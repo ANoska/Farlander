@@ -6,17 +6,10 @@ using UnityEngine.UI;
 public class MountainLevelManager : MonoBehaviour
 {
     public GameObject player;
-    private CharacterController playerController;
 
     public Transform spawnPoint;
 
     public Text outOfBoundsText;
-
-    void Awake()
-    {
-        if (player != null)
-            playerController = player.GetComponent<CharacterController>();
-    }
 
     // Start is called before the first frame update
     void Start()
