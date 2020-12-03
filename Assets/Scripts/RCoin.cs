@@ -22,7 +22,8 @@ public class RCoin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Text gt = this.GetComponent<Text>();
+        //gt.text = "Coins Collected: " + collected;
     }
 
 

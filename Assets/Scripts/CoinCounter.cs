@@ -25,6 +25,10 @@ public class CoinCounter : MonoBehaviour
         // Show the data in the GUITexts
         //uitLevel.text = "Level: " + (level + 1) + " of " + levelMax;
         uitCoins.text = "Coins Collected: " + CoinsCollected;
+        if(RCoin.collected > CoinsCollected)
+        {
+            CoinsCollected = RCoin.collected;
+        }
     }
     void Update()
     {
