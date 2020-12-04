@@ -8,6 +8,7 @@ public class CoinCounter : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public Text uitCoins; //UI Text CoinCounterText
+    public GameObject RedGate; //The door to the temple
     //[Header("Set Dynamically")]
     
     
@@ -33,5 +34,9 @@ public class CoinCounter : MonoBehaviour
     void Update()
     {
         UpdateGUI();
+        if(CoinsCollected >= 7)
+        {
+            Destroy(RedGate);
+        }
     }
 }
