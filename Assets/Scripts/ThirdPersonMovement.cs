@@ -15,7 +15,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     private Vector3 playerVelocity;
-    public bool isGrounded;
+
+    public float distanceGround;
+    public bool isGrounded = false;
 
     private PlayerAnimation playerAnimation;
 
@@ -26,6 +28,9 @@ public class ThirdPersonMovement : MonoBehaviour
         Cursor.visible = false;
 
         playerAnimation = this.GetComponent<PlayerAnimation>();
+
+        distanceGround = 0.25f;
+
     }
 
 
@@ -46,7 +51,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
         // Jumps
 
-        isGrounded = controller.isGrounded;
+        
+        //isGrounded = controller.isGrounded;
+        if(!Physics.Raycast(transform.position,-Vector3.up, distanceGround)) {
+            isGrounded = false;
+        } else {
+            isGrounded = true;
+        }
+
+
+
         if (isGrounded && playerVelocity.y < 0)
             playerVelocity.y = 0f;
 
