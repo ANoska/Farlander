@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class SnowLevelPlatforming : MonoBehaviour
 {
-    public GameObject checkpoint1;
+    public Transform checkpoint1;
     public GameObject player;
 
     //this is attatched to the fail zone
-    void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Player") {
-            Debug.Log("contact");
+    //void OnCollisionEnter(Collision other) {
+    //    if(other.gameObject.tag == "Player") {
+    //        Debug.Log("contact");
+    //        player.SetActive(false);
+    //        player.transform.position = checkpoint1.position;
+    //        player.gameObject.SetActive(true);
+    //    }
+    //}
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter");
+
+        if (other.gameObject.tag == "Player")
+        {
             player.SetActive(false);
-            player.transform.position = checkpoint1.transform.position;
+            player.transform.position = checkpoint1.position;
             player.gameObject.SetActive(true);
         }
     }
