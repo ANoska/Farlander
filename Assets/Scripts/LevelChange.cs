@@ -45,7 +45,7 @@ public class LevelChange : MonoBehaviour
             }
             else if(Level == "SnowLevel")
             {
-
+                SceneManager.LoadScene("_End");
             }
           
         }
