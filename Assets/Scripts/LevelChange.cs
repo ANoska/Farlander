@@ -29,7 +29,7 @@ public class LevelChange : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit coll)
     {
         GameObject collidedWith = coll.gameObject;
-        if (collidedWith.tag == "Player")
+        if (collidedWith.tag == "Portal")
         {
             if(Level == "ForestLevel")
             {

@@ -7,6 +7,7 @@ TagManager:
   - Ice
   - RedCoin
   - failzone
+  - Portal
   layers:
   - Default
   - TransparentFX
