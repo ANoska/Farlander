@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MountainLevelManager : MonoBehaviour
@@ -15,6 +16,8 @@ public class MountainLevelManager : MonoBehaviour
     public Text timerText;
 
     // Timer info
+    public GameObject outOfTimeMenu;
+    public Button tryAgainButton;
     public float startTime;
     public float timeLimit;
 
@@ -22,6 +25,8 @@ public class MountainLevelManager : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+
+        tryAgainButton.onClick.AddListener(() => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
     }
 
     // Update is called once per frame
@@ -32,8 +37,26 @@ public class MountainLevelManager : MonoBehaviour
 
     private void UpdateTimerText()
     {
+        if (outOfTimeMenu.activeSelf)
+            return;
+
         float timeRemaining = timeLimit - (Time.time - startTime);
+        if (timeRemaining <= 0)
+        {
+            OutOfTime();
+            return;
+        }
         timerText.text = string.Format("Time Remaining:\n{0}", TimeSpan.FromSeconds(timeRemaining).ToString(@"mm\:ss"));
+    }
+
+    private void OutOfTime()
+    {
+        outOfTimeMenu.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        player.SetActive(false);
     }
 
     public void OnPlayerOutOfBounds()
