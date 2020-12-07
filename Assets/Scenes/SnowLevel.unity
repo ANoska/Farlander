@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 126737353}
   m_Layer: 0
   m_Name: CameraPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291640100}
   m_LocalRotation: {x: -0, y: -0.28893155, z: -0, w: 0.9573498}
-  m_LocalPosition: {x: 406.93, y: 49.82, z: 265.24}
+  m_LocalPosition: {x: 406.93, y: 47.99, z: 265.24}
   m_LocalScale: {x: 4.674716, y: 0.8520817, z: 4.674716}
   m_Children: []
   m_Father: {fileID: 0}
@@ -554,7 +554,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488478453}
-  m_LocalRotation: {x: 0.1421929, y: 0.000000008515773, z: -0.0000000012233127, w: 0.98983896}
+  m_LocalRotation: {x: 0.1421929, y: -0.000000008515776, z: 0.000000001223313, w: 0.98983896}
   m_LocalPosition: {x: 370.27, y: 49.718002, z: 302.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1183,7 +1183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968657141}
   m_LocalRotation: {x: -0, y: -0.28893155, z: -0, w: 0.9573498}
-  m_LocalPosition: {x: 350.29, y: 34.93, z: 323.62}
+  m_LocalPosition: {x: 350.29, y: 35.59, z: 323.62}
   m_LocalScale: {x: 4.674716, y: 0.8520817, z: 4.674716}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1348,6 +1348,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: f06b74515c019554a80b5a6ebca323a9, type: 3}
       propertyPath: m_Name
       value: Robot Kyle - Modified
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f06b74515c019554a80b5a6ebca323a9, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06b74515c019554a80b5a6ebca323a9, type: 3}
@@ -1938,7 +1942,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350882093}
   m_LocalRotation: {x: -0, y: -0.28893155, z: -0, w: 0.9573498}
-  m_LocalPosition: {x: 333.78, y: 30.47, z: 331.98}
+  m_LocalPosition: {x: 334.59, y: 30.47, z: 330.77}
   m_LocalScale: {x: 4.674716, y: 0.8520817, z: 4.674716}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7291,11 +7295,11 @@ GameObject:
   - component: {fileID: 1770564963}
   - component: {fileID: 1770564962}
   - component: {fileID: 1770564961}
-  - component: {fileID: 1770564965}
   - component: {fileID: 1770564966}
+  - component: {fileID: 1770564965}
   m_Layer: 0
   m_Name: FAILURE ZONE 1
-  m_TagString: Untagged
+  m_TagString: failzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7308,8 +7312,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770564960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -7389,6 +7393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint1: {fileID: 1168294757}
+  player: {fileID: 1431732307}
 --- !u!54 &1770564966
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7471,7 +7476,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801994469}
-  m_LocalRotation: {x: 0.17067233, y: 0.000000008476966, z: -0.0000000014683269, w: 0.98532784}
+  m_LocalRotation: {x: 0.17067233, y: -0.00000000847696, z: 0.0000000014683262, w: 0.98532784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7545,7 +7550,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856607166}
-  m_LocalRotation: {x: 0.1421929, y: 0.000000008515773, z: -0.0000000012233125, w: 0.989839}
+  m_LocalRotation: {x: 0.1421929, y: -0.000000008515776, z: 0.0000000012233129, w: 0.989839}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7867,7 +7872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1405716982577713630, guid: 0006327d98c20874eac56a99e9a0984d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.422
+      value: 43.577
       objectReference: {fileID: 0}
     - target: {fileID: 1405716982577713630, guid: 0006327d98c20874eac56a99e9a0984d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -5,25 +5,28 @@ using UnityEngine;
 public class SnowLevelPlatforming : MonoBehaviour
 {
     public GameObject checkpoint1;
+    public GameObject player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter(Collider other) {
-        if(other.tag == "Player") {
+    //this is attatched to the fail zone
+    void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Player") {
             Debug.Log("contact");
-            other.gameObject.SetActive(false);
-            other.transform.position = checkpoint1.transform.position;
-            other.gameObject.SetActive(true);
+            player.SetActive(false);
+            player.transform.position = checkpoint1.transform.position;
+            player.gameObject.SetActive(true);
         }
     }
+
+    //this is what Nathan used in his RedCoin Script:
+    /*
+    void OnControllerColliderHit(ControllerColliderHit coll) {
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.tag == "failzone") {
+            Debug.Log("contact");
+            player.SetActive(false);
+            player.transform.position = checkpoint1.transform.position;
+            player.gameObject.SetActive(true);
+        }
+    }
+    */
 }
