@@ -95,4 +95,18 @@ public class ThirdPersonMovement : MonoBehaviour
             playerAnimation.IsRunning = false;
         }
     }
+
+    public void OnSpeedBoostPickup()
+    {
+        StartCoroutine(SpeedBoostPlayer());
+    }
+
+    private IEnumerator SpeedBoostPlayer()
+    {
+        speed *= 2;
+
+        yield return new WaitForSeconds(3);
+
+        speed /= 2;
+    }
 }
