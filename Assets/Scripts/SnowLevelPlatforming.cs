@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class SnowLevelPlatforming : MonoBehaviour
 {
+    public Transform defaultSpawn;
     public Transform checkpoint1;
+    public Transform checkpoint2;
+    public Transform checkpoint3;
+    public Transform checkpoint4;
+
+    public static int checkPointNum;
+
     public GameObject player;
 
-    //this is attatched to the fail zone
-    //void OnCollisionEnter(Collision other) {
-    //    if(other.gameObject.tag == "Player") {
-    //        Debug.Log("contact");
-    //        player.SetActive(false);
-    //        player.transform.position = checkpoint1.position;
-    //        player.gameObject.SetActive(true);
-    //    }
-    //}
+    void Start() {
+        checkPointNum = 0;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,22 +24,37 @@ public class SnowLevelPlatforming : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            player.SetActive(false);
-            player.transform.position = checkpoint1.position;
-            player.gameObject.SetActive(true);
+            moveToCheckpoint();
         }
     }
 
-    //this is what Nathan used in his RedCoin Script:
-    /*
-    void OnControllerColliderHit(ControllerColliderHit coll) {
-        GameObject collidedWith = coll.gameObject;
-        if (collidedWith.tag == "failzone") {
-            Debug.Log("contact");
-            player.SetActive(false);
-            player.transform.position = checkpoint1.transform.position;
-            player.gameObject.SetActive(true);
+    public void moveToCheckpoint() {
+        switch (checkPointNum) {
+            case 1:
+                player.SetActive(false);
+                player.transform.position = defaultSpawn.position;
+                player.gameObject.SetActive(true);
+                break;
+            case 2:
+                player.SetActive(false);
+                player.transform.position = checkpoint1.position;
+                player.gameObject.SetActive(true);
+                break;
+            case 3:
+                player.SetActive(false);
+                player.transform.position = checkpoint2.position;
+                player.gameObject.SetActive(true);
+                break;
+            case 4:
+                player.SetActive(false);
+                player.transform.position = checkpoint3.position;
+                player.gameObject.SetActive(true);
+                break;
+            case 5:
+                player.SetActive(false);
+                player.transform.position = checkpoint4.position;
+                player.gameObject.SetActive(true);
+                break;
         }
     }
-    */
 }

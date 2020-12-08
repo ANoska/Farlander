@@ -21,15 +21,15 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 551d93cdf68af964fbcac774aec745de, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Cube:
         m_Texture: {fileID: 8900000, guid: ab32b7db83aa38d4da2d595f6b7bc3f2, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 546d66e149b4acd4b8e1fa46183ab7ee, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Shininess: 0.01
