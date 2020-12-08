@@ -33,6 +33,10 @@ public class MountainLevelManager : MonoBehaviour
     void Update()
     {
         UpdateTimerText();
+
+        // Restart the level if the 'r' key is pressed
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void UpdateTimerText()
