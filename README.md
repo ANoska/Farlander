@@ -6,12 +6,15 @@ This repo contains all of the Unity assets and code used to create our team proj
 
 We recommend playing the standalone desktop build found here:
 
-Mac:
-
 Windows: https://drive.google.com/file/d/1u35S47gz_jYH76-Vs6yEN2W-TawAxzH0/view?usp=sharing
 
 An unoptimized WebGL build can also be found here as well:
 https://simmer.io/@austino/farlander
+
+## Demo
+
+Here Jake & Austin discuss the complexity of the game and give commentary over a brief demo of the game:
+https://www.youtube.com/watch?v=yJhFtN4lqck&ab_channel=AustinNoska
 
 ## References
 ### Assets Used
